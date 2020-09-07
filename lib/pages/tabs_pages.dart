@@ -15,7 +15,6 @@ class TabPage extends StatelessWidget {
     return GetBuilder(
         init: _controller,
         builder: (_) => Scaffold(
-          
           body: _Paginas(),
           bottomNavigationBar: _Navegacion(),
         ),
@@ -25,6 +24,10 @@ class TabPage extends StatelessWidget {
 }
 
  class _Navegacion  extends StatelessWidget {
+
+   final colores = [];
+
+
    @override
    Widget build(BuildContext context) {
      return GetBuilder<TabController>(
@@ -34,7 +37,8 @@ class TabPage extends StatelessWidget {
             items: <Widget>[
               Icon(Icons.account_circle, size: 30.0,color: Colors.white,),
               Icon(Icons.home, size: 30.0,color: Colors.white),
-              Icon(Icons.search, size: 30.0,color: Colors.white)
+              Icon(Icons.search, size: 30.0,color: Colors.white),
+              Icon(Icons.collections, size: 30.0,color: Colors.white)
             ],
             // color: Color.fromRGBO(63, 63, 63, 1),
             color: Colors.black,
@@ -42,7 +46,7 @@ class TabPage extends StatelessWidget {
             onTap: (int index ) => _.paginaActual = index,
             // color
             buttonBackgroundColor: Colors.black,
-            backgroundColor: Colors.white,
+            backgroundColor: Color.fromRGBO(235, 235, 235, 1),
         ),
      );
    }
@@ -64,7 +68,8 @@ class TabPage extends StatelessWidget {
             children: [
               PerfilPage(),
               HomePage(),
-              SearchPage()
+              SearchPage(),
+              SearchPage(),
             ],
             
         ),
@@ -86,7 +91,7 @@ class TabPage extends StatelessWidget {
       print("instanciado");
     }
 
-    int _paginaActual = 0;
+    int _paginaActual = 1;
 
     int get paginaActual => this._paginaActual;
 

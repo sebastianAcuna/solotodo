@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: TabPage(),
+      
       routes: {
         // 'splash_screen' : (BuildContext context) => HomePage(),
         // 'login_page' : (BuildContext context) => HomePage(),
