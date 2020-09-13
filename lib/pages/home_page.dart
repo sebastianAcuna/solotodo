@@ -5,23 +5,7 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
 
-  
 
-
-
-  // Widget _pageSelector(int index){
-
-  //   switch(index){
-  //     case 0:
-  //       return _perfilPage;
-  //     case 1:
-  //       return HomePage();
-  //     case 2:
-  //       return _searchPage;
-  //     default:
-  //       return HomePage();
-  //   }
-  // }
   
   @override
   Widget build(BuildContext context) {
@@ -37,6 +21,7 @@ class HomePage extends StatelessWidget {
       ),
       body:
           ListView.builder(
+            
             scrollDirection: Axis.horizontal,
             itemCount: 5,
             itemBuilder: (context, index) => Padding(
